@@ -567,7 +567,18 @@
         }, {
           host: this.registryUrl
         });
+        // And a MicroFlo runtime
+        var microflo = new this.registry.Runtime({
+          label: 'Local MicroFLo environment',
+          id: require('uuid')(),
+          protocol: 'microflo',
+          address: 'simulator://',
+          type: 'microflo'
+        }, {
+          host: this.registryUrl
+        });
         this.userRuntimes.push(iframe.runtime);
+        this.userRuntimes.push(microflo.runtime);
         this.fire('runtimes', this.userRuntimes);
       },
       createdproject: function (project) {
