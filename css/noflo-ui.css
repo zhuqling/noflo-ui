@@ -191,6 +191,13 @@ noflo-component-editor {
   height: 300px;
 }
 
+#microflo-simulator {
+  position: absolute;
+  border: none;
+  width: 300px;
+  height: 300px;
+}
+
 #container > .preview-container {
   display: none;
 }
